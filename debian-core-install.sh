@@ -71,6 +71,8 @@ install_packages() {
 # Call function to install packages
 install_packages "${packages[@]}"
 
+sleep 2
+
 # Ensure /usr/share/xsessions directory exists
 if [ ! -d /usr/share/xsessions ]; then
     sudo mkdir -p /usr/share/xsessions
@@ -108,6 +110,18 @@ cd $HOME/.config/suckless/dwm*;
         fi
 )
 
+sleep 2
+
+# install Vim and Neovim
+
+
+# set up flatpak
+sudo apt install flatpak
+sudo apt install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists --subset=verified flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+sleep 2
+
 # Enable and disable services
 sudo systemctl stop avahi-daemon.socket
 sudo systemctl disable avahi-daemon.socket
@@ -118,7 +132,8 @@ sudo systemctl mask avahi-daemon.service
 sudo systemctl enable acpid
 
 # Cleanup
-sudo apt autoremove && sudo apt autoclean
+sudo apt autoremove
+sudo apt autoclean
 
 #-- Kill sudo --#
 stopsudo
