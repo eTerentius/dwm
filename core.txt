@@ -15,6 +15,7 @@ gnome-common
 gnome-keyring
 gnome-power-manager
 gvfs-backends
+libncurses-dev
 libnotify-bin
 libnotify-dev
 libtool-bin
