@@ -1,12 +1,14 @@
 acpi
 acpid
 build-essential
+clang
 cmake
 curl
 dialog
 dosfstools
 dunst
 fd-find
+fzf
 gettext
 git
 gnome-common
@@ -15,6 +17,7 @@ gnome-power-manager
 gvfs-backends
 libnotify-bin
 libnotify-dev
+libtool-bin
 libx11-dev
 libxft-dev
 libxinerama-dev
@@ -35,7 +38,8 @@ policykit-1-gnome
 python3-pip
 python3-venv
 redshift
-sucless-tools
+stow
+suckless-tools
 unzip
 wget
 xbacklight
